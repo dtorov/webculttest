@@ -2,7 +2,6 @@
 .line-container {
   top: 216px;
   left: 352px;
-  width: 1280px;
   height: 328px;
   position: absolute;
   display: flex;
@@ -13,7 +12,7 @@
   width: 280px;
   height: 328px;
   position: relative;
-  margin-left: auto;
+  margin-right: 15px;
 }
 .item-disabled {
   opacity: 0.5;
@@ -426,6 +425,7 @@
   border: 1px solid var(--color-gainsboro-200);
   box-sizing: border-box;
   height: 48px;
+  background-color: #f6f3f3;
 }
 .div26 {
   top: 13px;

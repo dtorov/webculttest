@@ -2,7 +2,7 @@
 
     <div class="test">
       <div class="line-container">
-        <div class="line-item" v-for="item in paints" :key="item.id">
+        <div class="line-item" v-for="item in paints.filter(el => el.name.toLowerCase().indexOf(paintFilter.toLowerCase()) !== -1)" :key="item.id">
           <img :class="item.enabled ? 'mask-group-icon' : 'mask-group-icon item-disabled'" alt="" :src="item.img" />
 
           <div class="child"></div>
@@ -48,6 +48,7 @@
         <div class="div25">
           <div class="child4"></div>
           <div class="div26">Поиск по названию картины</div>
+          <input class="child4" type="text" placeholder="Поиск по названию картины" v-model="paintFilter">
           <button class="group1">
             <div class="group-child"></div>
             <b class="b11">Найти</b>
@@ -110,6 +111,7 @@ export default {
   },
   data () {
     return {
+      paintFilter: ''
     }
   },
   computed: mapState({
